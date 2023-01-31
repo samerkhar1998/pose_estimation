@@ -30,7 +30,7 @@ class poseEstimator:
                               dtype=np.float32)
 
         # define the image points (the coordinates of the object points in the image)
-
+        # TODO: This should be taken from Alon
         img_points = choosePoints.getImagePts(img, 'myImgage', 4)
         # calculate the rotation and translation vectors
         ret, rvec, tvec = cv2.solvePnP(obj_points, img_points, camera_matrix, distortion_coefficients)

@@ -1,11 +1,6 @@
 import glob
-from cameraCalibration import *
-from tryyyy import *
-import cv2
-from ReadFrames import readFrames
 import yaml
-from yaml.loader import SafeLoader
-from poseEstimation import poseEstimator
+from poseEstimation import *
 
 if __name__ == '__main__':
     # Open the file and load the file
@@ -21,16 +16,8 @@ if __name__ == '__main__':
     estimate = poseEstimator()
 
     for image in glob.glob("images/*.png"):
-        img = cv.imread(image)
+        img = cv2.imread(image)
 
         estimate.estimate(camera_matrix, distortion_coefficients, img)
 
-
-    # cap = cv2.VideoCapture('images/1668941063944.mp4')
-    # read = readFrames(cap)
-    # read.read()
-    # images = glob.glob('images/*.png')
-    #
-    # camera = cameraCalibration(images)
-    # camera.run()
 
