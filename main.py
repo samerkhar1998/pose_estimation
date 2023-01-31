@@ -19,6 +19,7 @@ if __name__ == '__main__':
         data['distortion_coefficients']['rows'], data['distortion_coefficients']['cols'])
 
     estimate = poseEstimator()
+
     for image in glob.glob("images/*.png"):
         img = cv.imread(image)
 
@@ -28,7 +29,7 @@ if __name__ == '__main__':
     # cap = cv2.VideoCapture('images/1668941063944.mp4')
     # read = readFrames(cap)
     # read.read()
-    images = glob.glob('images/*.png')
+    # images = glob.glob('images/*.png')
     #
     # camera = cameraCalibration(images)
     # camera.run()
